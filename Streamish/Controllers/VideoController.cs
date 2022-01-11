@@ -21,6 +21,12 @@ namespace Streamish.Controllers
             return Ok(_videoRepository.GetAll());
         }
 
+        [HttpGet("search")]
+        public IActionResult Search(string q, bool sortDesc)
+        {
+            return Ok(_videoRepository.Search(q, sortDesc));
+        } 
+
         [HttpGet("GetVideoByIdWithComments/{id}")]
         public IActionResult GetVideoByIdWithComments(int id)
         {
