@@ -22,4 +22,12 @@ export const getAllWithComments = () => {
         }
     }).then((res) => res.json())
 }
+export const searchComments = () => {
+    return fetch(baseUrl + "/Search", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then((res) => res.json())
+}
 
