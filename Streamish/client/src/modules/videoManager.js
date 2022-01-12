@@ -14,3 +14,12 @@ export const addVideo = (video) => {
         body: JSON.stringify(video),
     });
 };
+export const getAllWithComments = () => {
+    return fetch(baseUrl + "/GetWithComments", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then((res) => res.json())
+}
+
