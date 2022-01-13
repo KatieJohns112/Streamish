@@ -30,4 +30,3 @@ export const searchComments = () => {
         }
     }).then((res) => res.json())
 }
-
